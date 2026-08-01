@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+		<div class="header-container">
+		<div class="btn-menu">
+			<label for="btn-menu">☰</label>
+		</div>
+			<div class="logo">
+				<h1>ExleyderAnime</h1>
+                <img src="logo.png" alt="logo">
+			</div>
+            <nav class="nav-container">
+                <form class="search">
+                    <input name="q" type="text" id="search-anime" autocomplete="off" placeholder="Buscar...">
+                    <button><i class="fa-search"></i></button>
+                </form>
+			    <nav class="menu">
+			    	<a href="#">Inicio</a>
+			    	<a href="#">Explorar</a>
+			    	<a href="#">Top</a>
+			    	<a href="#">Favoritos</a>
+                    <button id="cambiarFondo">cambiar fondo</button>
+			    </nav>
+            </nav>
+		</div>
+	</header>
+	<div class="capa"></div>
+    <!-- opciones del menu -->
+    <input type="checkbox" id="btn-menu">
+        <div class="container-menu">
+        	<div class="cont-menu">
+        		<nav>
+        			<a href="#">Dashboard</a>
+        			<a href="#">Anime</a>
+        			<a href="#">Movies</a>
+                    <hr>
+        			<a href="#">More</a>
+        			<a href="#">Settings</a>
+        			<a href="#">Contact developer</a>
+                    <hr>
+                    <a href="#">Filtrar</a>
+        			<a href="#">Settings</a>
+        			<a href="#">Contact developer</a>
+        		</nav>
+        		<label for="btn-menu">✖️</label>
+        	</div>
+        </div>
+    
+    <main class="main-box">
+        <div class="header-mainBox">
+        <dialog id="habilitarDialogo">
+            
+            <button id="cerrar">X</button>
+
+            <figure>
+                <img src="" alt="">
+            </figure>
+            <article>
+                <div class="image-container">
+                <img src="https://media.kitsu.app/anime/cover_images/2/original.png" alt="${personaje.name}">
+                </div>
+                <span>Nombre</span>
+                <p>Estado</p>
+                <p>species</p>
+                <p>gender</p>
+                <p>origin</p>
+            </article>
+            <ul>
+                <li>lista</li>
+                <li>lista</li>
+                <li>lista</li>
+                <li>lista</li>
+            </ul>
+        </dialog>
+        </div>
+        <section id="main"></section>
+        <section id="if-">SECCION 2</section>
+        <section id="if-">SECCION 3</section>
+        <div class="hidden-items">
+            <button id="abrir">Show description</button>
+        
+        </div>
+
+    </main>
+
+    <footer></footer>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
