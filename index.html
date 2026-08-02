@@ -5,56 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
 
-    <header>
-		<div class="header-container">
-		<div class="btn-menu">
-			<label for="btn-menu">☰</label>
-		</div>
-			<div class="logo">
-				<h1>ExleyderAnime</h1>
-                <img src="logo.png" alt="logo">
-			</div>
+    <header class=".header ">
+		<div class="container flex_row-header">
+            <div class="header-left">
+
+                <div class="btn-menu">
+                    <label for="btn-menu" class="menu-btn-label">
+                        <img src="tallerConsumoApi/img/icons8-menú-arcade/fondo-icons8-menu-64.png" alt="">
+                    </label>
+                </div>
+                <div class="logo">
+                    <div class="title">
+                        <h1>Exleyder<span>Anime</span></h1>
+                    </div>
+                </div>
+            </div>
+		
             <nav class="nav-container">
                 <form class="search">
                     <input name="q" type="text" id="search-anime" autocomplete="off" placeholder="Buscar...">
-                    <button><i class="fa-search"></i></button>
+                    <button class="btn-search"><i class="fa-search"><img class="icono" src="tallerConsumoApi/img/icons8-menú-arcade/busqueda-icons8-search-64.png" alt=""></i></button>
                 </form>
-			    <nav class="menu">
-			    	<a href="#">Inicio</a>
-			    	<a href="#">Explorar</a>
-			    	<a href="#">Top</a>
-			    	<a href="#">Favoritos</a>
-                    <button id="cambiarFondo">cambiar fondo</button>
-			    </nav>
+                <button class="btn-fondo" id="cambiarFondo"><img src="tallerConsumoApi/img/icons8-menú-arcade/icons8-emoji-luna-creciente-48.png" alt="" class="icono"></button>
             </nav>
 		</div>
 	</header>
 	<div class="capa"></div>
     <!-- opciones del menu -->
-    <input type="checkbox" id="btn-menu">
+        <input type="checkbox" id="btn-menu">
         <div class="container-menu">
-        	<div class="cont-menu">
-        		<nav>
-        			<a href="#">Dashboard</a>
-        			<a href="#">Anime</a>
-        			<a href="#">Movies</a>
+            <div class="cont-menu">
+                <nav>
+                    <a href="#">Dashboard</a>
+                    <a href="#">Anime</a>
+                    <a href="#">Movies</a>
                     <hr>
-        			<a href="#">More</a>
-        			<a href="#">Settings</a>
-        			<a href="#">Contact developer</a>
+                    <a href="#">More</a>
+                    <a href="#">Settings</a>
+                    <a href="#">Contact developer</a>
                     <hr>
                     <a href="#">Filtrar</a>
-        			<a href="#">Settings</a>
-        			<a href="#">Contact developer</a>
-        		</nav>
-        		<label for="btn-menu">✖️</label>
-        	</div>
+                    <a href="#">Settings</a>
+                    <a href="#">Contact developer</a>
+                    <hr>
+                <img class="icono-grande" src="tallerConsumoApi/img/logo4.png" alt="logo">
+
+                </nav>
+
+                <label for="btn-menu">✖️</label>
+            </div>
         </div>
     
     <main class="main-box">
+         <div class="mainBox-menu">
+            <a href="#Inicio">Inicio</a>
+            <a href="#Explorar">Explorar</a>
+            <a href="#Top">Top</a>
+            <a href="#Favoritos">Favoritos</a>
+        </div>
+        <section class="hero-banner" id="hero-banner">
+            <div class="banner-content">
+                <div class="items-banner-content">
+                    <div class="text-banner-title">
+                        <h2>Descubre tu proximo</h2>
+                        <h1>ANIME <span>FAVORITO</span></h1>
+                    </div>
+                    <div class="text-banner-description">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit ratione eligendi consequuntur cum temporibus. Fugit culpa aperiam harum in necessitatibus, tempora magni ut dolore blanditiis, ullam nobis, dignissimos maiores consequatur!</p>
+                    </div>
+                    <div class="btn-banner-content">
+                        <button class="btn-banner-content btn-banner-content-1">Explorar anime</button>
+                        <button class="btn-banner-content btn-banner-content-2">Ver top <strong class="span">ANIMES</strong></button>
+                    </div>
+                </div>
+                <div class="empty"></div>
+            </div>
+        </section>
+
         <div class="header-mainBox">
         <dialog id="habilitarDialogo">
             
@@ -81,7 +112,6 @@
             </ul>
         </dialog>
         </div>
-        <section id="main"></section>
         <section id="if-">SECCION 2</section>
         <section id="if-">SECCION 3</section>
         <div class="hidden-items">
