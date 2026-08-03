@@ -71,6 +71,10 @@ body {
     padding: 0;
     background: var(--color-bg-main);
     letter-spacing: 2px;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 a {
@@ -107,6 +111,9 @@ button > span {
     color: var(--color-bg-main);
 }
 /* general */
+main.main-box {
+    flex: 1; 
+}
 .span{
     color: var(--color-text-span);
 }
@@ -453,7 +460,7 @@ dialog {
     background-color: #2b1b4d;
     color: var(--color-text-main);
     box-sizing: border-box;
-    margin: auto;
+    margin: auto 300px;
     padding: 20px;
 }
 
@@ -483,6 +490,11 @@ dialog {
     box-shadow: 0 10px 20px var(--color-primary-button);
     
 }
+/* top */
+.topAnimes-header {
+    text-align: center;
+}
+
 
 /* Favoritos */
 
@@ -492,3 +504,102 @@ dialog {
 }
 
 /* fondo blanco JS */
+
+/* footer */
+
+.main-footer {
+    background-color: var(--color-bg-card);
+    border-top: 1px solid rgba(135, 63, 247, 0.2); /* Borde neón muy sutil */
+    padding: 40px 20px 15px 20px;
+    margin-top: 50px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-bottom: 25px;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+}
+
+/* Columna de Marca */
+.footer-logo {
+    font-size: 28px;
+    margin: 0;
+}
+
+.footer-logo span {
+    color: var(--color-text-span);
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: var(--color-text-main);
+    margin: 0;
+    opacity: 0.9;
+}
+
+.rights {
+    font-size: 0.8rem;
+    color: var(--color-text-span);
+    margin: 0;
+}
+
+/* Columna Social */
+.social-col h3 {
+    font-size: 1rem;
+    margin: 0 0 8px 0;
+    color: var(--color-text-main);
+    letter-spacing: 1px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+
+/* Botones interactivos con Glow Effect */
+.footer-btn {
+    display: inline-block;
+    padding: 8px 18px;
+    background: rgba(75, 25, 172, 0.2);
+    border: 1px solid var(--color-primary-button);
+    color: var(--color-text-main);
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.footer-btn:hover {
+    background: var(--color-primary-button);
+    box-shadow: 0 0 12px var(--color-text-span);
+    transform: translateY(-2px);
+    color: #fff;
+}
+
+/* Barra inferior del Footer */
+.footer-bottom-bar {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 15px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+}

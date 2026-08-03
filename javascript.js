@@ -423,6 +423,9 @@ if (formBusqueda && inputBusqueda) {
             buscarAnimes(termino);
         }
     });
-}
+};
 
 /* loading */
+
+/* Footer */
+
