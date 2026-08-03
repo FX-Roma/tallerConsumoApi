@@ -94,7 +94,41 @@
             
                 <div id="explore-container" class="anime-grid"></div>
             
-                <dialog id="batman" class="modal-anime">
+                
+                
+            </div>
+        </section>
+
+
+        <section id="main-topAnimes">
+            <!-- El header lleva su clase normal -->
+            <div class="topAnimes-header">
+                <h2>🔥 Top 30 Animes Más Famosos</h2>
+                <p>Los títulos más populares elegidos por la comunidad</p>
+            </div>
+        
+            <!-- El ID "top-container" va AQUÍ, donde se inyectan las tarjetas -->
+            <div id="top-container" class="anime-grid"></div>
+           
+        </section>
+
+        <section id="main-favorites">
+            <div>
+                <h1>No tienes <span>animes favoritos</span></h1>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Dialogs -->
+    <!-- sintaxis
+
+
+
+    
+<!-- Este es el dialog general de js -->
+
+    <dialog id="batman" class="modal-anime">
                     <div class="modal-content">
                         <button id="cerrarBatman" class="btn-close">&times;</button>
                     
@@ -116,76 +150,6 @@
                         </div>
                     </div>
                 </dialog>
-                
-            </div>
-        </section>
-
-
-        <section id="main-topAnimes">
-            <!-- El header lleva su clase normal -->
-            <div class="topAnimes-header">
-                <h2>🔥 Top 30 Animes Más Famosos</h2>
-                <p>Los títulos más populares elegidos por la comunidad</p>
-            </div>
-        
-            <!-- El ID "top-container" va AQUÍ, donde se inyectan las tarjetas -->
-            <div id="top-container" class="anime-grid"></div>
-        </section>
-
-        <section id="main-favorites">
-            <div>
-                <h1>No tienes <span>animes favoritos</span></h1>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Dialogs -->
-    <!-- sintaxis
-
-    <dialog class="explorar-anime" id="habilitarDialogo">
-        <button id="cerrar">X</button>
-        <article>
-            <div class="image-container">
-            <img src="https://media.kitsu.app/anime/cover_images/2/original.png" alt="${personaje.name}">
-            </div>
-            <span>Nombre</span>
-            <p>Estado</p>
-            <p>species</p>
-            <p>gender</p>
-            <p>origin</p>
-        </article>
-        <ul>
-            <li>lista</li>
-            <li>lista</li>
-            <li>lista</li>
-            <li>lista</li>
-        </ul>
-    </dialog>
-    -->
-
-    <dialog class="explorar-anime" id="habilitarDialogo">
-        <button id="cerrar">X</button>
-        <article>
-            <div class="image-container">
-            <img background="url('https://media.kitsu.app/anime/cover_images/2/original.png')" alt="${personaje.name}">
-            </div>
-            <span>Nombre</span>
-            <p>Estado</p>
-            <p>species</p>
-            <p>gender</p>
-            <p>origin</p>
-        </article>
-    </dialog>
-
-    <!-- Diálogo exclusivo para Batman -->
-<dialog id="batman">
-    <button id="cerrarBatman">X</button>
-    <article>
-        <h2>Detalles de Batman Anime</h2>
-        <p>Esta es una ventana emergente completamente diferente.</p>
-    </article>
-</dialog>
 
     <footer></footer>
     
