@@ -61,11 +61,11 @@
         </div>
     
     <main class="main-box">
-         <div class="mainBox-menu">
-            <a href="#Inicio">Inicio</a>
-            <a href="#Explorar">Explorar</a>
-            <a href="#Top">Top</a>
-            <a href="#Favoritos">Favoritos</a>
+        <div class="mainBox-menu">
+            <a id="abrir-Inicio" href="#Inicio">Inicio</a>
+            <a id="abrir-Explorar" href="#Explorar">Explorar</a>
+            <a id="abrir-Top" href="#Top">top</a>
+            <a id="abrir-Favoritos" href="#Favoritos">Favoritos</a>
         </div>
         <section class="hero-banner" id="hero-banner">
             <div class="banner-content">
@@ -75,53 +75,120 @@
                         <h1>ANIME <span>FAVORITO</span></h1>
                     </div>
                     <div class="text-banner-description">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit ratione eligendi consequuntur cum temporibus. Fugit culpa aperiam harum in necessitatibus, tempora magni ut dolore blanditiis, ullam nobis, dignissimos maiores consequatur!</p>
+                        <p>Attack on Titan (Shingeki no Kyojin) es una serie de manga y anime de fantasía oscura y acción. La historia sigue a la humanidad viviendo encerrada en ciudades protegidas por tres enormes murallas para defenderse de los titanes, unos gigantes devoradores de hombres. Tras la destrucción de su hogar, el joven Eren Jaeger se une al ejército para luchar contra ellos</p>
                     </div>
                     <div class="btn-banner-content">
                         <button class="btn-banner-content btn-banner-content-1">Explorar anime</button>
-                        <button class="btn-banner-content btn-banner-content-2">Ver top <strong class="span">ANIMES</strong></button>
+                        <button id="btn-banner-topAnimes" class="btn-banner-content btn-banner-content-2" >Ver top <strong class="span">ANIMES</strong></button>
                     </div>
                 </div>
-                <div class="empty"></div>
             </div>
         </section>
 
-        <div class="header-mainBox">
-        <dialog id="habilitarDialogo">
-            
-            <button id="cerrar">X</button>
-
-            <figure>
-                <img src="" alt="">
-            </figure>
-            <article>
-                <div class="image-container">
-                <img src="https://media.kitsu.app/anime/cover_images/2/original.png" alt="${personaje.name}">
+        <section id="main-explorar">
+            <div class="explorar-main-box">
+                <div class="explore-header">
+                    <h1>Explorar <span>Animes</span></h1>
+                    <p>Descubre el catálogo de animes disponibles</p>
                 </div>
-                <span>Nombre</span>
-                <p>Estado</p>
-                <p>species</p>
-                <p>gender</p>
-                <p>origin</p>
-            </article>
-            <ul>
-                <li>lista</li>
-                <li>lista</li>
-                <li>lista</li>
-                <li>lista</li>
-            </ul>
-        </dialog>
-        </div>
-        <section id="if-">SECCION 2</section>
-        <section id="if-">SECCION 3</section>
-        <div class="hidden-items">
-            <button id="abrir">Show description</button>
+            
+                <div id="explore-container" class="anime-grid"></div>
+            
+                <dialog id="batman" class="modal-anime">
+                    <div class="modal-content">
+                        <button id="cerrarBatman" class="btn-close">&times;</button>
+                    
+                        <div class="modal-body">
+                            <div class="modal-poster">
+                                <img id="modal-img" src="" alt="Portada del anime">
+                            </div>
+                        
+                            <div class="modal-info">
+                                <h2 id="modal-title">Título del Anime</h2>
+                                <div class="modal-tags">
+                                    <span id="modal-rating" class="tag">⭐ -</span>
+                                    <span id="modal-status" class="tag">Estado</span>
+                                    <span id="modal-episodes" class="tag">Episodios: -</span>
+                                </div>
+                                <h3>Sinopsis</h3>
+                                <p id="modal-synopsis">Cargando sinopsis...</p>
+                            </div>
+                        </div>
+                    </div>
+                </dialog>
+                
+            </div>
+        </section>
+
+
+        <section id="main-topAnimes">
+            <!-- El header lleva su clase normal -->
+            <div class="topAnimes-header">
+                <h2>🔥 Top 30 Animes Más Famosos</h2>
+                <p>Los títulos más populares elegidos por la comunidad</p>
+            </div>
         
-        </div>
+            <!-- El ID "top-container" va AQUÍ, donde se inyectan las tarjetas -->
+            <div id="top-container" class="anime-grid"></div>
+        </section>
+
+        <section id="main-favorites">
+            <div>
+                <h1>No tienes <span>animes favoritos</span></h1>
+            </div>
+        </section>
 
     </main>
 
+    <!-- Dialogs -->
+    <!-- sintaxis
+
+    <dialog class="explorar-anime" id="habilitarDialogo">
+        <button id="cerrar">X</button>
+        <article>
+            <div class="image-container">
+            <img src="https://media.kitsu.app/anime/cover_images/2/original.png" alt="${personaje.name}">
+            </div>
+            <span>Nombre</span>
+            <p>Estado</p>
+            <p>species</p>
+            <p>gender</p>
+            <p>origin</p>
+        </article>
+        <ul>
+            <li>lista</li>
+            <li>lista</li>
+            <li>lista</li>
+            <li>lista</li>
+        </ul>
+    </dialog>
+    -->
+
+    <dialog class="explorar-anime" id="habilitarDialogo">
+        <button id="cerrar">X</button>
+        <article>
+            <div class="image-container">
+            <img background="url('https://media.kitsu.app/anime/cover_images/2/original.png')" alt="${personaje.name}">
+            </div>
+            <span>Nombre</span>
+            <p>Estado</p>
+            <p>species</p>
+            <p>gender</p>
+            <p>origin</p>
+        </article>
+    </dialog>
+
+    <!-- Diálogo exclusivo para Batman -->
+<dialog id="batman">
+    <button id="cerrarBatman">X</button>
+    <article>
+        <h2>Detalles de Batman Anime</h2>
+        <p>Esta es una ventana emergente completamente diferente.</p>
+    </article>
+</dialog>
+
     <footer></footer>
+    
 
     <script src="javascript.js"></script>
 </body>

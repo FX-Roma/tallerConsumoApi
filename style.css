@@ -1,6 +1,8 @@
 :root {
     --color-bg-main:#010307 ;
     --color-bg-card: #080c16 ;
+    --color-bg-dialog: #0f0026;
+    --color-bg-clicking: #4e2c82;
     --color-primary-button: #4b19ac ;
     --color-primary-hover: ;
     --color-text-main: #fdfdfd;
@@ -53,9 +55,18 @@
 }
 
 /* Unidades */
+#main-explorar,
+#main-topAnimes,
+#main-favorites {
+  display: none;
+}
+section{
+    height: 100%;
+    width: 100%;
+}
 body {
     color: var(--color-text-main);
-    font-family: fuenteGaming;
+    font-family: texto-banner;
     margin: 0;
     padding: 0;
     background: var(--color-bg-main);
@@ -80,6 +91,7 @@ h2 {
 
 p{
     letter-spacing: none;
+    font-family: sans-serif;
 }
 button{
     background: var(--color-primary-button);
@@ -149,7 +161,7 @@ button > span {
     align-content: center;
     justify-content: space-between;
 }
-
+/*  Loading */
 	/*Estilos para el encabezado*/
 
     header {
@@ -251,6 +263,7 @@ button > span {
 		position: relative;
 		transition: all 500ms ease;
 		transform: translateX(-100%);
+        font-family: fuenteGaming;
 	}
 	#btn-menu:checked ~ .container-menu .cont-menu{
 		transform: translateX(0%);
@@ -313,6 +326,7 @@ button > span {
         display: flex;
         letter-spacing: 4px;
         font-family: texto-banner;
+        box-sizing: border-box;
 }
 .banner-content{
     display: grid;
@@ -334,7 +348,7 @@ button > span {
     display: block;
 }
 .text-banner-description {
-    font-family:serif;
+    font-family:sans-serif;
 }
 .btn-banner-content {
     border-radius: 0;
@@ -345,4 +359,134 @@ button > span {
 
 .btn-banner-content-2 {
     background-color: transparent;
+}
+
+/* EXPLORER  */
+.explore-header {
+    text-align: center;
+    padding: var(--spacing-sm);
+    margin: 0 20px;
+    background: var(--color-bg-card);
+    border-radius: 12px ;
+}
+.anime-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 20px 20px;
+}
+
+.anime-card {
+    background-color: var(--color-bg-card);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-family: sans-serif;
+}
+
+.anime-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px var(--color-primary-button);
+}
+
+.anime-card .image-container {
+    width: 100%;
+    height: 250px;
+}
+
+.anime-card .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.anime-card .card-content {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.anime-card h3 {
+    font-size: 0.95rem;
+    color: var(--color-text-main);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+
+.anime-card .badge {
+    align-self: flex-start;
+    background-color: var(--color-bg-card);
+    color: #a855f7;
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.anime-card .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    color: #a0a0ab;
+    margin-top: 4px;
+}
+
+.anime-card .rating {
+    color: #facc15;
+}
+
+/* cuando click a las cartas */
+
+.modal-content{
+    color: var(--color-text-main);
+    padding: var(--spacing-md);
+}
+dialog {
+    background-color: #2b1b4d;
+    color: var(--color-text-main);
+    box-sizing: border-box;
+    margin: auto;
+    padding: 20px;
+}
+
+.modal-body{
+    padding: var(--spacing-md);
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.modal-info p, h3, .modal-tags {
+    padding: var(--spacing-xs) 0 ;
+    font-family: sans-serif;
+}
+.btn-close {
+    padding: var(--spacing-md);
+    margin-top: -25px;
+    margin-left: -20px;
+}
+.top-badge {
+    display: block;
+    padding: 8px 1px;
+    width: 100%;
+    height: 20px;
+    text-align: center;
+}
+.iluminar {
+    box-shadow: 0 10px 20px var(--color-primary-button);
+    
+}
+
+/* Favoritos */
+
+#main-favorites{
+    
+    text-align: center;
 }
